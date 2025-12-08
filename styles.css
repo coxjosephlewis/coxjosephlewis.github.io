@@ -2,14 +2,15 @@ body {
     margin: 0;
     padding: 0;
     background: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Headings */
 h1, h2 {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #000000;
 }
 
@@ -20,22 +21,27 @@ h1 {
     text-align: center;
 }
 
+/* CV Header Styling */
 h2 {
-    align-self: flex-start;
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    text-align: left;
 }
 
+/* CV Section */
 .cv-section {
-    width: 90%;
-    max-width: 1200px;
-    margin-bottom: 40px;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
     line-height: 1.6;
     font-size: 1rem;
 }
 
+/* Video Grid */
 .video-grid {
     width: 90%;
     max-width: 1200px;
@@ -51,6 +57,7 @@ h2 {
     border: none;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
     .video-grid {
         grid-template-columns: repeat(2, 1fr);
