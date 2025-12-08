@@ -16,7 +16,7 @@ h1 {
     color: #000000;
 }
 
-/* Two-column layout wrapper */
+/* Wrapper for two columns */
 .content-wrapper {
     display: flex;
     width: 90%;
@@ -24,18 +24,26 @@ h1 {
     gap: 40px;
 }
 
-/* Columns */
 .left-column,
 .right-column {
     width: 50%;
 }
 
-/* Section headings */
+/* Right-align utility class */
+.align-right {
+    text-align: right;
+}
+
+/* Headings */
 h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #000000;
     text-align: left;
+}
+
+.left-column h2 {
+    text-align: right; /* override to right-align for left column */
 }
 
 /* CV section text */
@@ -44,20 +52,20 @@ h2 {
     font-size: 1rem;
 }
 
-/* Divider between columns */
+/* Divider */
 .divider {
     width: 2px;
     background-color: #000000;
 }
 
-/* Projects section spacing */
+/* Projects styling */
 .projects p {
     margin-bottom: 25px;
     font-size: 1rem;
     line-height: 1.4;
 }
 
-/* Link styling */
+/* Project link styling */
 .projects a {
     text-decoration: none;
     color: #000000;
@@ -68,7 +76,7 @@ h2 {
     text-decoration: underline;
 }
 
-/* Responsive: stack columns */
+/* Responsive mobile view */
 @media (max-width: 900px) {
     .content-wrapper {
         flex-direction: column;
@@ -81,5 +89,9 @@ h2 {
     .left-column,
     .right-column {
         width: 100%;
+    }
+
+    .align-right {
+        text-align: left; /* avoid awkward mobile layout */
     }
 }
