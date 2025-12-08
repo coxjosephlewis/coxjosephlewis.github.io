@@ -16,7 +16,7 @@ h1 {
     color: #000000;
 }
 
-/* Wrapper for two columns */
+/* Two-column layout */
 .content-wrapper {
     display: flex;
     width: 90%;
@@ -29,9 +29,13 @@ h1 {
     width: 50%;
 }
 
-/* Right-align utility class */
-.align-right {
+/* Alignment utility classes */
+.right-align {
     text-align: right;
+}
+
+.left-align {
+    text-align: left;
 }
 
 /* Headings */
@@ -39,17 +43,6 @@ h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #000000;
-    text-align: left;
-}
-
-.left-column h2 {
-    text-align: right; /* override to right-align for left column */
-}
-
-/* CV section text */
-.cv-section {
-    line-height: 1.6;
-    font-size: 1rem;
 }
 
 /* Divider */
@@ -58,14 +51,20 @@ h2 {
     background-color: #000000;
 }
 
-/* Projects styling */
+/* CV section styling */
+.cv-section {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Projects */
 .projects p {
     margin-bottom: 25px;
     font-size: 1rem;
     line-height: 1.4;
 }
 
-/* Project link styling */
+/* Project links */
 .projects a {
     text-decoration: none;
     color: #000000;
@@ -76,10 +75,11 @@ h2 {
     text-decoration: underline;
 }
 
-/* Responsive mobile view */
+/* Responsive for mobile */
 @media (max-width: 900px) {
     .content-wrapper {
         flex-direction: column;
+        align-items: center;
     }
 
     .divider {
@@ -91,7 +91,8 @@ h2 {
         width: 100%;
     }
 
-    .align-right {
-        text-align: left; /* avoid awkward mobile layout */
+    .right-align,
+    .left-align {
+        text-align: left; /* better for mobile view */
     }
 }
