@@ -8,64 +8,78 @@ body {
     align-items: center;
 }
 
-/* Headings */
-h1, h2 {
-    font-family: 'Montserrat', sans-serif;
+h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-align: center;
     color: #000000;
 }
 
-h1 {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    text-align: center;
+/* Two-column layout wrapper */
+.content-wrapper {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 40px;
 }
 
-/* CV Header Styling */
+/* Columns */
+.left-column,
+.right-column {
+    width: 50%;
+}
+
+/* H2 heading */
 h2 {
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-    padding: 0 20px;
     font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #000000;
     text-align: left;
 }
 
-/* CV Section */
+/* CV section text */
 .cv-section {
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    padding: 0 20px;
     line-height: 1.6;
     font-size: 1rem;
 }
 
-/* Video Grid */
-.video-grid {
-    width: 90%;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+/* Divider between columns */
+.divider {
+    width: 2px;
+    background-color: #000000;
 }
 
-.video-grid iframe {
-    width: 100%;
-    height: 315px;
-    background: #000;
-    border: none;
+/* Projects section spacing */
+.projects p {
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
-/* Responsive */
+/* Link styling */
+.projects a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive: stack columns */
 @media (max-width: 900px) {
-    .video-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .content-wrapper {
+        flex-direction: column;
     }
-}
 
-@media (max-width: 600px) {
-    .video-grid {
-        grid-template-columns: 1fr;
+    .divider {
+        display: none;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
     }
 }
