@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------
+    GLOBAL STYLES
+-------------------------------------------------------------- */
+
 body {
     margin: 0;
     padding: 0;
@@ -8,34 +12,23 @@ body {
     align-items: center;
 }
 
-h1, h2 {
-    color: #000000;
-    text-decoration: underline;
-    text-decoration-color: #30638E;
-}
-
-h1 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-/* Two-column layout */
+/* Page wrapper used on all pages */
 .content-wrapper {
     display: flex;
     width: 90%;
     max-width: 1200px;
     gap: 40px;
+    padding-top: 80px; /* space below HOME link if present */
     padding-bottom: 60px;
 }
 
+/* Column layout */
 .left-column,
 .right-column {
     width: 50%;
 }
 
-/* Alignment utility classes */
+/* Alignment utilities */
 .right-align {
     text-align: right;
 }
@@ -44,62 +37,13 @@ h1 {
     text-align: left;
 }
 
-/* Divider */
-.divider {
-    width: 2px;
-    background-color: #000000;
-}
-
-/* CV section */
-.cv-section {
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-/* Projects */
-.projects p {
-    margin-bottom: 25px;
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-/* Project links */
-.projects a {
-    text-decoration: none;
+/* Headings */
+h2 {
     color: #000000;
-    font-weight: 600;
-}
-
-.projects a:hover {
     text-decoration: underline;
-    text-decoration-color: #30638E;
+    text-decoration-color: #F25C54; /* accent colour */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
-/* Footer */
-footer {
-    width: 100%;
-    height: 60px;
-    background: #30638E;
-}
-
-/* Responsive for mobile */
-@media (max-width: 900px) {
-    .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .divider {
-        display: none;
-    }
-
-    .left-column,
-    .right-column {
-        width: 100%;
-    }
-
-    .right-align,
-    .left-align {
-        text-align: left;
-    }
-}
+/* Divider (used on both home + proj*
